@@ -1,0 +1,482 @@
+2022-03-10 10:39:02 [scrapy.utils.log] INFO: Scrapy 2.6.1 started (bot: tymspider)
+2022-03-10 10:39:02 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.1.0, Python 3.7.11 (default, Jul 27 2021, 09:42:29) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-03-10 10:39:02 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'tymspider',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': 'logs\\tymspider\\yunlong\\3e215df8a01b11ec99e97c10c91fd873.log',
+ 'NEWSPIDER_MODULE': 'tymspider.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['tymspider.spiders']}
+2022-03-10 10:39:02 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-03-10 10:39:03 [scrapy.extensions.telnet] INFO: Telnet Password: 2485c5b3bda37152
+2022-03-10 10:39:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2022-03-10 10:39:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-03-10 10:39:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-03-10 10:39:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['tymspider.pipelines.TymspiderPipeline']
+2022-03-10 10:39:03 [scrapy.core.engine] INFO: Spider opened
+2022-03-10 10:39:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:39:03 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2022-03-10 10:39:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://172.10.128.130:10004/robots.txt> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:39:24 [py.warnings] WARNING: D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\engine.py:276: ScrapyDeprecationWarning: Passing a 'spider' argument to ExecutionEngine.download is deprecated
+  return self.download(result, spider) if isinstance(result, Request) else result
+
+2022-03-10 10:39:45 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://172.10.128.130:10004/robots.txt> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:40:06 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET http://172.10.128.130:10004/robots.txt> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:06 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET http://172.10.128.130:10004/robots.txt>: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:06 [filelock] DEBUG: Attempting to acquire lock 2355399539272 on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2022-03-10 10:40:06 [filelock] DEBUG: Lock 2355399539272 acquired on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2022-03-10 10:40:06 [filelock] DEBUG: Attempting to acquire lock 2355399594056 on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2022-03-10 10:40:06 [filelock] DEBUG: Lock 2355399594056 acquired on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2022-03-10 10:40:06 [filelock] DEBUG: Attempting to release lock 2355399594056 on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2022-03-10 10:40:06 [filelock] DEBUG: Lock 2355399594056 released on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/urls\62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2022-03-10 10:40:06 [filelock] DEBUG: Attempting to release lock 2355399539272 on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2022-03-10 10:40:06 [filelock] DEBUG: Lock 2355399539272 released on D:\Anaconda3\envs\scrapy_base\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2022-03-10 10:40:27 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001001&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:28 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001003&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:29 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001005&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:31 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001007&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:32 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001014&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:33 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001013&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:34 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001011&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001009&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:48 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002001&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:49 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002002&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:51 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002014&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002004&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:54 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002011&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:55 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002010&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002007&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:40:58 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003001&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:41:09 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001001&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:10 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001003&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:12 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001005&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:13 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001007&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:15 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001014&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:16 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001013&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001011&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:19 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001009&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:30 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002001&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:32 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002002&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:33 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002014&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:34 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002004&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:36 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002011&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:37 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002010&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:39 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002007&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:40 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003001&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:51 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001001&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:51 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001001&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:53 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001003&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:53 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001003&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:54 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001005&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:54 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001005&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:55 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001007&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:56 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001007&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:57 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001014&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:57 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001014&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:58 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001013&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:41:58 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001013&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:00 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001011&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:00 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001011&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:01 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001009&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:01 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203001009&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:42:12 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002001&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:12 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002001&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:14 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002002&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:14 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002002&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:15 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002014&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:15 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002014&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:16 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002004&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:17 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002004&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:18 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002011&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:18 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002011&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:19 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002010&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:19 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002010&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:21 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002007&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:21 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203002007&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:22 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003001&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:22 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003001&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:33 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003002&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003003&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:36 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003008&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:38 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003006&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:39 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003007&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:40 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003005&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:42 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004001&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:43 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004002&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:54 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004020&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004004&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:57 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004018&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:42:59 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004006&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:00 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004007&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:01 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004017&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:43:03 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004009&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:04 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004010&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:15 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003002&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:17 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003003&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003008&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:20 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003006&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:21 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003007&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:23 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003005&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004001&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004002&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:36 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004020&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:38 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004004&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:39 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004018&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:41 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004006&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:42 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004007&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:44 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004017&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:45 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004009&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004010&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:57 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003002&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:58 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003002&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:59 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003003&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:43:59 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003003&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:00 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003008&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:00 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003008&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:02 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003006&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:02 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003006&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:44:03 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003007&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:03 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003007&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:05 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003005&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:05 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203003005&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:06 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004001&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:06 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004001&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:08 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004002&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:08 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004002&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:18 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004020&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:19 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004020&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:20 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004004&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:20 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004004&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:21 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004018&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:22 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004018&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:23 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004006&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:23 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004006&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:24 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004007&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:24 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004007&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:26 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004017&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:26 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004017&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:27 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004009&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:27 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004009&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:29 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004010&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:29 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004010&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:40 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004016&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:41 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004012&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:42 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004015&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:44 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004014&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:45 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005001&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:47 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005002&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:48 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005003&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:44:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005004&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:01 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005005&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:02 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005006&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:45:04 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005007&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:05 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005001&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:06 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005002&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:08 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005003&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:09 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005004&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:11 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100006001&dataStatus=001&page=1&rows=20> (failed 1 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:22 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004016&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:23 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004012&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004015&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:26 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004014&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:27 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005001&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:29 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005002&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:31 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005003&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:32 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005004&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:43 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005005&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:44 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005006&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:46 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005007&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:47 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005001&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:48 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005002&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005003&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005004&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:45:53 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100006001&dataStatus=001&page=1&rows=20> (failed 2 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-10 10:46:04 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004016&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:04 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\engine.py", line 150, in _next_request
+    request = next(self.slot.start_requests)
+  File "C:\Users\Administrator\PycharmProjects\spider_base\tymspider\tymspider\spiders\YunlongSpider.py", line 43, in start_requests
+    print("[Info]::::::::url orgCode createFactory :::::::::[url]::", url)
+OSError: [Errno 22] Invalid argument
+2022-03-10 10:46:04 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004016&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:05 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004012&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:05 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004012&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:07 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004015&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:07 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004015&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:08 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004014&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:08 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203004014&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:10 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005001&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:10 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005001&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:11 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005002&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:11 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005002&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:13 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005003&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:13 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005003&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:14 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005004&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:14 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005004&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:25 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005005&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:25 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005005&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:26 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005006&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:26 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005006&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:28 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005007&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:28 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729203005007&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:29 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005001&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:29 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005001&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:31 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005002&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:31 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005002&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:32 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005003&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:32 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005003&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:34 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005004&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:34 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100005004&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:35 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100006001&dataStatus=001&page=1&rows=20> (failed 3 times): TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:35 [scrapy.core.scraper] ERROR: Error downloading <POST http://172.10.128.130:10004/flow/getListData.jhtml?orgCode=360729100006001&dataStatus=001&page=1&rows=20>
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\scrapy_base\lib\site-packages\scrapy\core\downloader\middleware.py", line 49, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+2022-03-10 10:46:35 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-03-10 10:46:35 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 147,
+ 'downloader/exception_type_count/twisted.internet.error.TCPTimedOutError': 147,
+ 'downloader/request_bytes': 85644,
+ 'downloader/request_count': 147,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/request_method_count/POST': 144,
+ 'elapsed_time_seconds': 452.620151,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 3, 10, 2, 46, 35, 832247),
+ 'log_count/DEBUG': 107,
+ 'log_count/ERROR': 99,
+ 'log_count/INFO': 17,
+ 'log_count/WARNING': 1,
+ 'retry/count': 98,
+ 'retry/max_reached': 49,
+ 'retry/reason_count/twisted.internet.error.TCPTimedOutError': 98,
+ "robotstxt/exception_count/<class 'twisted.internet.error.TCPTimedOutError'>": 1,
+ 'robotstxt/request_count': 1,
+ 'scheduler/dequeued': 144,
+ 'scheduler/dequeued/memory': 144,
+ 'scheduler/enqueued': 144,
+ 'scheduler/enqueued/memory': 144,
+ 'start_time': datetime.datetime(2022, 3, 10, 2, 39, 3, 212096)}
+2022-03-10 10:46:35 [scrapy.core.engine] INFO: Spider closed (finished)

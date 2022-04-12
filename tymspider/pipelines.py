@@ -187,7 +187,7 @@ class TymspiderPipeline:
                 item['centerContact'], item['chargeName'], item['address'], item['centerLevel'])
             print(insert_sql)
             print("test")
-            result = self.cursor.execute(insert_sql)
+            #result = self.cursor.execute(insert_sql)
 
         else:
             pass

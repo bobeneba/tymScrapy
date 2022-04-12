@@ -1,5 +1,3 @@
-import scrapy
-
 import json
 import os
 import re
@@ -7,7 +5,7 @@ import sqlite3
 from asyncio import sleep
 
 
-from ..items import CentItem
+from ..items import TymspiderItem
 import scrapy
 from scrapy import Request
 import time
@@ -16,14 +14,13 @@ from selenium.webdriver.common.by import By
 from urllib import request
 
 
-class InstitutionSpider(scrapy.Spider):
+class YunlongSpider(scrapy.Spider):
 
-    name = "Cent"
+    name = "yunlong"
 
     def start_requests(self):
-
-        # print(self.name)
-        # exit()
+        #print(self.name)
+        #exit()
 
         window = webdriver.Chrome()
         window.maximize_window()
@@ -48,7 +45,7 @@ class InstitutionSpider(scrapy.Spider):
 
         login_button = window.find_element(By.ID, 'loginbtn02')
         login_button.click()
-        time.sleep(3)
+        time.sleep(1)
         cookie_items = window.get_cookies()
         print(cookie_items)
         window.close()
@@ -58,19 +55,10 @@ class InstitutionSpider(scrapy.Spider):
 
 
         self.base_url = {
-
            # "cirs":"http://172.10.128.130:10004/cirs/getListData.jhtml?",
            # "100705":"http://172.10.128.130:10004/rspermanent/getListData.jhtml?",
-           # "100706":"http://172.10.128.130:10004/flow/getListData.jhtml?",
+            "100706":"http://172.10.128.130:10004/flow/getListData.jhtml?",
            # "100707":"http://172.10.128.130:10004/leftBehind/getListData.jhtml?"
-           # "pointyoung":"http://172.10.128.130:10001/zzgrid/zzgl/crowd/youth/listDataNP.json?"
-           # "releaseCriminal":"http://172.10.128.130:10001/zzgrid/zzgl/crowd/releasedRecord/listDataNP.json?"
-           # "Community":"http://172.10.128.130:10001/zzgrid/zzgl/crowd/correctional/listDataByPartyList_Jiangxi.json?"
-           #"causeTrouble":"http://172.10.128.130:10001/zzgrid/zzgl/crowd/mentalIllnessRecord/listDataNP.json?"
-           # "drug":"http://172.10.128.130:10001/zzgrid/zzgl/crowd/drug/listDataByPartyListNP.json?" #cid
-           # "Organization" : "http://172.10.128.130:10001/zzgrid/zzgl/society/organization/listData.json?"
-            #"Institution":"http://172.10.128.130:10007/gmis/gmis/prvetionTeam/listData.json?&bizType=0&"
-            "cent":"http://172.10.128.130:10007/gmis/gmis/center/listData.json?bizType=8&"
         }
         #cookieStr = cookie_items["value"]
         #cookieStr ="UAM_SESSIONID=CE2165CFC4DC7DB02156B5EEABC4C845; UAM_TOKEN_FLAG=0; resourcekey=V6q72kt3G3uF1cB8pbKvg8rIo4k9n6FlCwKWlaBnQ7oClK+VAe91dZYokmCMJaPJ/ZlGwmK0TB9GMWPhmPMCZA==; resource=A/TbOURKlt6JFDOkwRY9sygyE6KFAk5UqGLYNYpqpJvCOSA+MJysxxFLIvy6MdcG; JSESSIONID=EE095BE4E1581E89A8566E8D316F8E59"
@@ -90,7 +78,7 @@ class InstitutionSpider(scrapy.Spider):
                 item_no["no"] = str(no);
                 item_no["url"] = str(value_url)
                 item_no["crawl_type"] = str(key)
-                url = value_url + "regionCode=" + str(code[0]).strip() + "&dataStatus=001&page=1&rows=20"
+                url = value_url + "orgCode=" + str(code[0]).strip() + "&dataStatus=001&page=1&rows=20"
                 # url="http://172.10.128.130:10004/cirs/getListData.jhtml?orgCode=360729203&dataStatus=001&page=3&rows=20"
 
                 print("[Info]::::::::url orgCode createFactory :::::::::[url]::", url)
@@ -103,14 +91,14 @@ class InstitutionSpider(scrapy.Spider):
         res_data = json.loads(response.body.decode('utf-8'))
         total=int(res_data['total'])
         url_from = response.url
-        orgcode = re.findall(r"regionCode=(.+)&d",url_from)
+        orgcode = re.findall(r"orgCode=(.+)&d",url_from)
         mate_item = response.meta
         crawl_url=mate_item['url']
 
         print("[Info]:::::rows total::::::: [total]::",total)
 
         if(int(total/1000)==0):
-            url = crawl_url + "regionCode=" + str(orgcode[0]).strip() + "&dataStatus=001&"
+            url = crawl_url + "orgCode=" + str(orgcode[0]).strip() + "&dataStatus=001&"
             url = url + "page=1"+"&rows="+str(total)
 
             print("[Info]:::::[row<1000]::[page 1]:::ture spider page crawler URL::::::: [url]::",url)
@@ -123,7 +111,7 @@ class InstitutionSpider(scrapy.Spider):
             for page in range((int(total / 1000)+1)):
                 if ((total - (page) * 1000) >= 1000):
                     #url = url + "page=" + str(page + 1) + "&rows=1000"
-                    url = crawl_url + "regionCode=" + str(orgcode[0]).strip() + "&dataStatus=001&"
+                    url = crawl_url + "orgCode=" + str(orgcode[0]).strip() + "&dataStatus=001&"
                     url = url + "page=" + str(page + 1) + "&rows=1000"
 
                     print("[Info]:::::[row>1000]::[page number]::ture spider crawler URL::::::: [url]:",url)
@@ -133,7 +121,7 @@ class InstitutionSpider(scrapy.Spider):
                                   callback=self.parse_item,meta=mate_item,dont_filter=True)
                 else:
                     rows = total - (page) * 1000
-                    url = crawl_url + "regionCode=" + str(orgcode[0]).strip() + "&dataStatus=001&"
+                    url = crawl_url + "orgCode=" + str(orgcode[0]).strip() + "&dataStatus=001&"
                     url = url + "page=" + str(page + 1) + "&rows=" + str(1000)
 
                     print("[Info]:::::[row>1000]::[page end]::ture spider crawler URL::::::: [url]:",url)
@@ -143,8 +131,7 @@ class InstitutionSpider(scrapy.Spider):
                                   callback=self.parse_item,meta=mate_item,dont_filter=True)
 
     def parse_item(self, response):
-        item = CentItem()
-
+        item = TymspiderItem()
         region_no = response.meta['no']
         crawl_type = response.meta['crawl_type']
         res_data = json.loads(response.body.decode('utf-8'))
@@ -153,31 +140,20 @@ class InstitutionSpider(scrapy.Spider):
         print("[Info]:::::::::::::spider parse item url::::::::::::[url]:",response.url)
 
         for row in res_rows:
-
-            # item["name"] = row["partyName"]
-            # item["person_type"] =str(crawl_type)
-            # if(hasattr(row,"residenceAddr")==True):
-            #     item["nowland"] = row["residenceAddr"]
-            # else:
-            #     item["nowland"] = " "
-            # item["registered_place"] = row["residence"]
-            # item["idcard"] = row["identityCard"]
-            # item["sex"] = row["genderCN"]identifier.sqlite
-            # item["nation"]= row["nationCN"]
-            # item["birthday"]=row["birthday"]
-            # item["contact"]=row["mobilePhone"]
-            print(1)
-            item["region_no"] = str(region_no)
-            item["crawl_type"] = str(crawl_type)
-
-            item["idCard"] = row['managerIdCard']
-            item['centerName'] = row['name']
-            item['centerContact'] = row['managerTel']
-            item["chargeName"] = row['manager']
-            item['address'] = row['orgAddr']
-            item['centerLevel'] = row['orgLevelStr']
-
-            print(item)
+            item["region_no"]=str(region_no)
+            item["name"] = row["partyName"]
+            item["person_type"] =str(crawl_type)
+            if(hasattr(row,"residenceAddr")==True):
+                item["nowland"] = row["residenceAddr"]
+            else:
+                item["nowland"] = " "
+            item["registered_place"] = row["residence"]
+            item["idcard"] = row["identityCard"]
+            item["sex"] = row["genderCN"]
+            item["nation"]= row["nationCN"]
+            item["birthday"]=row["birthday"]
+            item["contact"]=row["mobilePhone"]
+            #print(item)
             yield item
 
 
@@ -230,7 +206,7 @@ class InstitutionSpider(scrapy.Spider):
         print(result)
 
     def get_url(self):
-        sql_code='select code ,no,cid  from per_region where length(no)>9'
+        sql_code='select code ,no  from per_region where length(no)=20'
         result = self.cursor.execute(sql_code).fetchall()
         return result
 
